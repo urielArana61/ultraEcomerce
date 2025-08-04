@@ -15,6 +15,9 @@ interface props {
 }
 
 export const Carrusel = ({ products, isPending }: props) => {
+  const indicesDescuento = [0, 2, 11, 6];
+  const indicesRegalo = [1, 8];
+
   if (isPending) {
     return <Loading />
   }
@@ -36,8 +39,13 @@ export const Carrusel = ({ products, isPending }: props) => {
               <div className='text-sm text-gray-500'>12 items</div>
             </div>
             <CarouselContent>
-              {products.slice(0, 12).map((product) => (
-                <CarruselCard key={product.id} {...product} />
+              {products.slice(0, 12).map((product, index) => (
+                <CarruselCard 
+                  key={product.id} 
+                  {...product} 
+                  gift={indicesRegalo.includes(index)} 
+                  discount={indicesDescuento.includes(index)} 
+                />
               ))}
             </CarouselContent>
             <CarouselPrevious className='border-none bg-transparent shadow-none'/>
