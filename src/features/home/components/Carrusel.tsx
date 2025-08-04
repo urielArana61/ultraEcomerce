@@ -28,7 +28,7 @@ export const Carrusel = ({ products, isPending }: props) => {
           {products && <Carousel
             plugins={[
               Autoplay({
-                delay: 1000000,
+                delay: 4000,
               }),
             ]}
           >
