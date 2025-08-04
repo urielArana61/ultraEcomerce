@@ -15,7 +15,7 @@ Proyecto de tienda en línea desarrollado con React + Vite. Utiliza tecnologías
 
 ---
 ## Link del Deploy
-
+https://6890da880f9f997c2c75b09a--celadon-frangipane-cc167e.netlify.app/
 ---
 
 ## 🛠️ Cómo levantar el proyecto
